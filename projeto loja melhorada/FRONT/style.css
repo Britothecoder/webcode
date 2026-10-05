@@ -2,19 +2,18 @@
   box-sizing: border-box;
 }
 
-h1 {
-  /* teste */
-}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f4f7;
   color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #2f6f4f;
+  background-color: #cf6a13;
   color: white;
   padding: 24px 16px;
   text-align: center;
@@ -30,12 +29,14 @@ header p {
 }
 
 main {
-  max-width: 480px;
+  max-width: 520px;
+  width: 100%;
   margin: 24px auto;
   padding: 0 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1; /* Garante que o main ocupe o espaço e empurre o footer para o final */
 }
 
 .cartao {
@@ -72,30 +73,82 @@ input {
 button {
   margin-top: 16px;
   padding: 10px;
-  background-color: #2f6f4f;
+  background-color: #cf6a13;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 15px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 button:hover {
-  background-color: #255a3f;
+  background-color: #8b480d;
 }
 
+/* Parte 5: Melhorias na lista de produtos */
 ul#lista-produtos {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 ul#lista-produtos li {
-  padding: 10px;
+  padding: 10px 12px;
   background-color: #f4f4f7;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e0e0e5;
+}
+
+/* Container para agrupar os botões no final do li */
+.acoes-produto {
+  display: flex;
+  gap: 6px;
+}
+
+/* Estilos para os botões Editar e Remover */
+.btn-editar,
+.btn-remover {
+  margin-top: 0;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-editar {
+  background-color: #d97706;
+}
+
+.btn-editar:hover {
+  background-color: #b45309;
+}
+
+.btn-remover {
+  background-color: #dc2626;
+}
+
+.btn-remover:hover {
+  background-color: #b91c1c;
+}
+
+/* Parte 1: Estilização do Footer */
+footer {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 16px;
+  font-size: 13px;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
 }
