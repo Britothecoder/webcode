@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Cabeçalho -->
+   
     <header>
       <h1>Loja Simples</h1>
       <p>Controle de produtos</p>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
       <section class="cartao">
         <h2>Novo produto</h2>
@@ -26,7 +25,6 @@
           <label for="quantidade">Quantidade</label>
           <input type="number" id="quantidade" name="quantidade" min="0" placeholder="Ex: 10" required />
 
-          <!-- Parte 4: id adicionado para alterar o texto via JS -->
           <button type="submit" id="btn-submeter">Adicionar produto</button>
         </form>
       </section>
@@ -34,17 +32,13 @@
       <section class="cartao">
         <h2>Produtos cadastrados</h2>
         <ul id="lista-produtos">
-          <!-- Os produtos estáticos e dinâmicos serão gerenciados pelo JavaScript -->
         </ul>
       </section>
     </main>
 
-    <!-- Parte 1: Tag <footer> com informação do projeto -->
     <footer>
       <p>&copy; 2026 Loja Simples — Sistema de Controle de Estoque</p>
     </footer>
-
-    <!-- Aponta para a pasta BACK -->
     <script src="../BACK/script.js"></script>
   </body>
 </html>
